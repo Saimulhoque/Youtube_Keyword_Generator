@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.reward.RewardFragment"
+    android:padding="16dp"
+    android:background="#F3F3F3">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="40dp">
+        <LinearLayout
+            style="@style/layoutstyle">
+            <TextView
+                style="@style/LargeText1"
+                android:textStyle="bold"
+                android:text="@string/your_limit_has_been_ended"
+                android:textColor="#FF0000"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/to_get_more_limit_please_watch_ad_and_get_5_more_coin_to_continue"
+                android:textSize="18sp" />
+            <com.google.android.material.button.MaterialButton
+                style="@style/mybutton"
+                android:text="@string/get_reward"
+                android:id="@+id/reward"
+                android:layout_marginTop="100dp">
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Keyword Generator</string>
+    <string name="write_keyword">Write Keyword</string>
+    <string name="generate_tags">Generate Tags</string>
+    <string name="you_have_got_5_coin">You have got 5 coin!</string>
+    <string name="your_limit_has_been_ended">Your limit has been ended!</string>
+    <string name="to_get_more_limit_please_watch_ad_and_get_5_more_coin_to_continue">To get more limit, please watch ad and get 5 more coin to continue.....</string>
+    <string name="get_reward">Get Reward</string>
+    <string name="nul">null</string>
+    <string name="copy_tags">Copy Tags</string>
+    <string name="share_tags">Share Tags</string>
+    <string name="generated_tags">Generated Tags</string>
+    <string name="continues">Continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

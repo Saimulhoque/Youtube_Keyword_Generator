@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.tagResult.TagResultActivity"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#F3F3F3">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+        <LinearLayout
+            style="@style/layoutstyle">
+            <TextView
+                android:text="@string/generated_tags"
+                style="@style/LargeText2" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/chipgroup">
+                </com.google.android.material.chip.ChipGroup>
+            </ScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/mybutton"
+                android:text="@string/copy_tags"
+                android:id="@+id/copy">
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
