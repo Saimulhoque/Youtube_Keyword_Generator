@@ -8,7 +8,7 @@
     tools:context=".ui.tagResult.TagResultActivity"
     android:orientation="vertical"
     android:padding="8dp"
-    android:background="#F3F3F3">
+    android:background="#ECEAEA">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
@@ -18,11 +18,12 @@
             style="@style/layoutstyle">
             <TextView
                 android:text="@string/generated_tags"
+                android:layout_marginBottom="10dp"
                 style="@style/LargeText2" />
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="450dp">
+                android:layout_height="510dp">
                 <com.google.android.material.chip.ChipGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

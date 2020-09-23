@@ -51,14 +51,10 @@ public class MainActivity extends AppCompatActivity implements MyListener {
         @Override
         public void onRewardedAdLoaded() {
             // Ad successfully loaded.
-            Toast.makeText(MainActivity.this, "onRewardedAdLoaded", Toast.LENGTH_SHORT).show();
-            //rewardedAd.show(MainActivity.this, mRewardCallback);
         }
 
         @Override
         public void onRewardedAdFailedToLoad(LoadAdError adError) {
-            // Ad failed to load.
-            Toast.makeText(MainActivity.this, "onRewardedAdFailedToLoad", Toast.LENGTH_SHORT).show();
             loadAd();
         }
     };
