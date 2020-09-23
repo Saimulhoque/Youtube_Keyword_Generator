@@ -54,6 +54,7 @@
     </style>
 
     <style name="chip_style" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="chipBackgroundColor">@color/design_default_color_primary</item>
 
     </style>
 

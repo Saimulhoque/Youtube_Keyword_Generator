@@ -12,18 +12,33 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_marginBottom="8dp"
         app:cardCornerRadius="8dp">
-        <LinearLayout
-            style="@style/layoutstyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
             <TextView
                 android:text="@string/generated_tags"
                 android:layout_marginBottom="10dp"
+                android:id="@+id/tags"
                 style="@style/LargeText2" />
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/mybutton"
+                android:text="@string/copy_tags"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/copy">
+            </com.google.android.material.button.MaterialButton>
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="510dp">
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tags"
+                android:layout_above="@id/copy">
                 <com.google.android.material.chip.ChipGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -31,12 +46,7 @@
                 </com.google.android.material.chip.ChipGroup>
             </ScrollView>
 
-            <com.google.android.material.button.MaterialButton
-                style="@style/mybutton"
-                android:text="@string/copy_tags"
-                android:id="@+id/copy">
-            </com.google.android.material.button.MaterialButton>
-        </LinearLayout>
+        </RelativeLayout>
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.gms.ads.AdView

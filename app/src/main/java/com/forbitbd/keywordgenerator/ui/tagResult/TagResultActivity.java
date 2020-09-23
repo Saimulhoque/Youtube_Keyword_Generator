@@ -1,5 +1,6 @@
 package com.forbitbd.keywordgenerator.ui.tagResult;
 
+import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,9 +13,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.forbitbd.keywordgenerator.R;
+import com.forbitbd.keywordgenerator.ui.main.MainActivity;
 import com.forbitbd.keywordgenerator.utils.Constant;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -46,21 +49,24 @@ public class TagResultActivity extends AppCompatActivity implements View.OnClick
 
         chipGroup = findViewById(R.id.chipgroup);
 
-
         btnCopy = findViewById(R.id.copy);
         btnCopy.setOnClickListener(this);
 
         for (String x:tags){
             //values = values+x+",\n";
             ContextThemeWrapper newContext = new ContextThemeWrapper(this, R.style.chip_style);
-            Chip chip = new Chip(newContext);
+            final Chip chip = new Chip(newContext);
             chip.setWidth(ChipGroup.LayoutParams.WRAP_CONTENT);
             chip.setHeight(ChipGroup.LayoutParams.WRAP_CONTENT);
             chip.setChecked(true);
 
+
             chip.setText(x);
 
             chipGroup.addView(chip);
+
+
+
         }
 
 
